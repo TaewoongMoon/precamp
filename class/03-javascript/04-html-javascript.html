@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title> HTML과 JAVASCRIPT</title>
+    <script>
+        function hello(){
+            alert("안녕하세요");
+        }
+        function myChange(){
+            document.getElementById("aaa").innerText = "변경되었습니다."
+        }
+        function myPlus(){
+            const temp = document.getElementById("bbb").innerText
+            document.getElementById("bbb").innerText = Number(temp) + 1
+        }
+
+        function myMinus(){
+            const temp = document.getElementById("bbb").innerText
+            if(temp >= 1){
+                document.getElementById("bbb").innerText = Number(temp) - 1
+            }else{
+                alert("오류입니다. 숫자를 확인해주세요.")
+            }
+    }
+    </script>
+</head>
+<body>
+    <button onclick="hello()">클릭하세요</button>
+    <div id = "aaa">아직 변경전이에요.</div>
+    <button onclick="myChange()">변경해주세요</button>
+    <div id = "bbb">0</div>
+    <button onclick="myPlus()">plus</button>
+    <button onclick="myMinus()">minus</button>
+</body>
+</html>
